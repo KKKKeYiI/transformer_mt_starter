@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "训练短句演示模型",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": [
+        "${workspaceFolder}\\minimal_transformer_mt.py",
+        "--epochs",
+        "120",
+        "--report-every",
+        "20",
+        "--output-model",
+        "${workspaceFolder}\\checkpoints\\demo_transformer.pt"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "PYTHONIOENCODING": "utf-8"
+        }
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
